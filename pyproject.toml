@@ -1,0 +1,17 @@
+[project]
+name = "ench320-labs"
+version = "0.1.0"
+description = "series of computer labs that serve as hands on exercises for learning python"
+authors = [
+    {name = "Ahmad Alsaadi"}
+]
+readme = "README.md"
+requires-python = "3.14.2"
+dependencies = [
+    "jupyter (>=1.1.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
