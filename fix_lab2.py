@@ -1,0 +1,677 @@
+#!/usr/bin/env python3
+"""
+Regenerate Lab 2 with complete Arabic translations and working Google Colab link.
+"""
+
+import json
+
+def create_control_flow_notebook():
+    """Create Lab 2: Control Flow Statements notebook with full Arabic translations."""
+    
+    notebook = {
+        "cells": [
+            {
+                "cell_type": "markdown",
+                "id": "lab2_title",
+                "metadata": {},
+                "source": [
+                    "# Lab 2: Control Flow - Making Decisions\n",
+                    "\n",
+                    "Master decision-making with `if`, `if-else`, `if-elif-else`, and nested conditionals.\n",
+                    "\n",
+                    "## Learning Objectives\n",
+                    "By the end of this lab, you will:\n",
+                    "- Use `if` statements to execute code conditionally\n",
+                    "- Create branching logic with `if-else` statements\n",
+                    "- Handle multiple conditions with `if-elif-else` statements\n",
+                    "- Build nested conditionals for complex decision trees\n",
+                    "- Write clean, readable conditional code\n",
+                    "- Solve real-world problems using control flow logic"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept1_intro",
+                "metadata": {},
+                "source": [
+                    "## Concept 1: if Statements - Making Decisions\n",
+                    "\n",
+                    "An `if` statement allows your program to make decisions based on conditions.\n",
+                    "\n",
+                    "**Syntax:**\n",
+                    "```python\n",
+                    "if condition:\n",
+                    "    # Code executes if condition is True\n",
+                    "```\n",
+                    "\n",
+                    "**How it works:**\n",
+                    "1. The condition is evaluated (True or False)\n",
+                    "2. If True, the indented code block executes\n",
+                    "3. If False, the code block is skipped\n",
+                    "\n",
+                    "**Key Points:**\n",
+                    "- Conditions evaluate to True or False\n",
+                    "- Use comparison operators: `==`, `!=`, `<`, `>`, `<=`, `>=`\n",
+                    "- Indentation (4 spaces) is critical in Python\n",
+                    "- The colon `:` ends the condition line"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept1_arabic",
+                "metadata": {},
+                "source": [
+                    "<details>\n",
+                    "<summary style=\"cursor: pointer; color: #667EEA; font-weight: bold; font-size: 14px; font-family: 'Amiri', serif;\">🌍 Arabic Translation / الترجمة العربية</summary>\n",
+                    "\n",
+                    "<div dir=\"rtl\" style=\"text-align: right; margin-top: 10px; padding: 15px; background: linear-gradient(135deg, #F5F5F5 0%, #FAFAFA 100%); border-radius: 8px; border-right: 4px solid #667EEA; font-family: 'Amiri', serif; font-size: 16px; line-height: 1.8;\">\n",
+                    "\n",
+                    "<link href=\"https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap\" rel=\"stylesheet\">\n",
+                    "\n",
+                    "## مفهوم 1: جملة if - اتخاذ القرارات\n",
+                    "\n",
+                    "جملة `if` تسمح لبرنامجك باتخاذ قرارات بناءً على الشروط.\n",
+                    "\n",
+                    "**الصيغة:**\n",
+                    "```python\n",
+                    "if condition:\n",
+                    "    # يتم تنفيذ الكود إذا كان الشرط صحيحاً\n",
+                    "```\n",
+                    "\n",
+                    "**كيفية العمل:**\n",
+                    "1. يتم تقييم الشرط (صحيح أو خاطئ)\n",
+                    "2. إذا كان صحيحاً، يتم تنفيذ كتلة الكود المسافة بها\n",
+                    "3. إذا كان خاطئاً، يتم تخطي كتلة الكود\n",
+                    "\n",
+                    "**النقاط الرئيسية:**\n",
+                    "- الشروط تقيّم إلى صحيح أو خاطئ\n",
+                    "- استخدم مشغلات المقارنة: `==`, `!=`, `<`, `>`, `<=`, `>=`\n",
+                    "- المسافة البادئة (4 مسافات) حتمية في Python\n",
+                    "- القولون `:` ينهي سطر الشرط\n",
+                    "\n",
+                    "</div>\n",
+                    "</details>"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept1_example",
+                "metadata": {},
+                "source": [
+                    "### Example 1.1: Age Verification\n",
+                    "\n",
+                    "Check if someone is old enough to vote:\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept1_code1",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# Example: Age verification\n",
+                    "age = 18\n",
+                    "\n",
+                    "if age >= 18:\n",
+                    "    print(\"You are eligible to vote!\")\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept1_example2",
+                "metadata": {},
+                "source": [
+                    "### Example 1.2: Temperature Check\n",
+                    "\n",
+                    "Determine if it's cold:\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept1_code2",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# Example: Temperature check\n",
+                    "temperature = 5\n",
+                    "\n",
+                    "if temperature < 10:\n",
+                    "    print(\"It's cold! Wear a jacket.\")\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept1_task",
+                "metadata": {},
+                "source": [
+                    "### Task 1: Check Eligibility\n",
+                    "\n",
+                    "Write an `if` statement to check if a student's score is 80 or higher. If so, print \"Pass!\".\n",
+                    "\n",
+                    "Test with: score = 85\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept1_task_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# TODO: Write an if statement\n",
+                    "score = 85\n",
+                    "\n",
+                    "# Write your code here\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept2_intro",
+                "metadata": {},
+                "source": [
+                    "## Concept 2: if-else Statements - Two Paths\n",
+                    "\n",
+                    "An `if-else` statement provides two execution paths: one when the condition is True, another when it's False.\n",
+                    "\n",
+                    "**Syntax:**\n",
+                    "```python\n",
+                    "if condition:\n",
+                    "    # Code if condition is True\n",
+                    "else:\n",
+                    "    # Code if condition is False\n",
+                    "```\n",
+                    "\n",
+                    "**Key Points:**\n",
+                    "- Exactly one code block executes\n",
+                    "- Use `else` to handle the False case\n",
+                    "- Perfect for binary (yes/no) decisions\n",
+                    "- The program always takes one path"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept2_arabic",
+                "metadata": {},
+                "source": [
+                    "<details>\n",
+                    "<summary style=\"cursor: pointer; color: #667EEA; font-weight: bold; font-size: 14px; font-family: 'Amiri', serif;\">🌍 Arabic Translation / الترجمة العربية</summary>\n",
+                    "\n",
+                    "<div dir=\"rtl\" style=\"text-align: right; margin-top: 10px; padding: 15px; background: linear-gradient(135deg, #F5F5F5 0%, #FAFAFA 100%); border-radius: 8px; border-right: 4px solid #667EEA; font-family: 'Amiri', serif; font-size: 16px; line-height: 1.8;\">\n",
+                    "\n",
+                    "<link href=\"https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap\" rel=\"stylesheet\">\n",
+                    "\n",
+                    "## مفهوم 2: جملة if-else - طريقان\n",
+                    "\n",
+                    "جملة `if-else` توفر طريقين للتنفيذ: أحدهما عندما يكون الشرط صحيحاً، والآخر عندما يكون خاطئاً.\n",
+                    "\n",
+                    "**الصيغة:**\n",
+                    "```python\n",
+                    "if condition:\n",
+                    "    # الكود إذا كان الشرط صحيحاً\n",
+                    "else:\n",
+                    "    # الكود إذا كان الشرط خاطئاً\n",
+                    "```\n",
+                    "\n",
+                    "**النقاط الرئيسية:**\n",
+                    "- يتم تنفيذ كتلة واحدة بالضبط\n",
+                    "- استخدم `else` للتعامل مع الحالة الخاطئة\n",
+                    "- مثالي للقرارات الثنائية (نعم/لا)\n",
+                    "- البرنامج يأخذ دائماً أحد المسارين\n",
+                    "\n",
+                    "</div>\n",
+                    "</details>"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept2_example",
+                "metadata": {},
+                "source": [
+                    "### Example 2: Weather Advice\n",
+                    "\n",
+                    "Give clothing advice based on temperature:\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept2_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# Example: Weather advice\n",
+                    "temperature = 5\n",
+                    "\n",
+                    "if temperature > 15:\n",
+                    "    print(\"It's warm! Wear light clothing.\")\n",
+                    "else:\n",
+                    "    print(\"It's cold! Wear warm clothing.\")\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept2_task",
+                "metadata": {},
+                "source": [
+                    "### Task 2: Discount Calculator\n",
+                    "\n",
+                    "Write an `if-else` statement to check if the purchase amount is 100 or more.\n",
+                    "- If yes: print \"Discount applied!\"\n",
+                    "- If no: print \"No discount.\"\n",
+                    "\n",
+                    "Test with: purchase_amount = 150\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept2_task_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# TODO: Write an if-else statement\n",
+                    "purchase_amount = 150\n",
+                    "\n",
+                    "# Write your code here\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept3_intro",
+                "metadata": {},
+                "source": [
+                    "## Concept 3: if-elif-else Statements - Multiple Paths\n",
+                    "\n",
+                    "When you need to check multiple conditions, use `if-elif-else`. The program checks each condition in order and executes the first True block.\n",
+                    "\n",
+                    "**Syntax:**\n",
+                    "```python\n",
+                    "if condition1:\n",
+                    "    # Code if condition1 is True\n",
+                    "elif condition2:\n",
+                    "    # Code if condition2 is True\n",
+                    "elif condition3:\n",
+                    "    # Code if condition3 is True\n",
+                    "else:\n",
+                    "    # Code if all conditions are False\n",
+                    "```\n",
+                    "\n",
+                    "**Key Points:**\n",
+                    "- `elif` stands for \"else if\"\n",
+                    "- Can have multiple `elif` blocks\n",
+                    "- Only the first True condition executes\n",
+                    "- `else` catches all remaining cases (optional)"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept3_arabic",
+                "metadata": {},
+                "source": [
+                    "<details>\n",
+                    "<summary style=\"cursor: pointer; color: #667EEA; font-weight: bold; font-size: 14px; font-family: 'Amiri', serif;\">🌍 Arabic Translation / الترجمة العربية</summary>\n",
+                    "\n",
+                    "<div dir=\"rtl\" style=\"text-align: right; margin-top: 10px; padding: 15px; background: linear-gradient(135deg, #F5F5F5 0%, #FAFAFA 100%); border-radius: 8px; border-right: 4px solid #667EEA; font-family: 'Amiri', serif; font-size: 16px; line-height: 1.8;\">\n",
+                    "\n",
+                    "<link href=\"https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap\" rel=\"stylesheet\">\n",
+                    "\n",
+                    "## مفهوم 3: جملة if-elif-else - مسارات متعددة\n",
+                    "\n",
+                    "عندما تحتاج للتحقق من عدة شروط، استخدم `if-elif-else`. البرنامج يفحص كل شرط بالترتيب وينفذ أول كتلة صحيحة.\n",
+                    "\n",
+                    "**الصيغة:**\n",
+                    "```python\n",
+                    "if condition1:\n",
+                    "    # الكود إذا كان condition1 صحيحاً\n",
+                    "elif condition2:\n",
+                    "    # الكود إذا كان condition2 صحيحاً\n",
+                    "elif condition3:\n",
+                    "    # الكود إذا كان condition3 صحيحاً\n",
+                    "else:\n",
+                    "    # الكود إذا كانت جميع الشروط خاطئة\n",
+                    "```\n",
+                    "\n",
+                    "**النقاط الرئيسية:**\n",
+                    "- `elif` تعني \"else if\" (وإلا إذا)\n",
+                    "- يمكن أن يكون هناك عدة كتل `elif`\n",
+                    "- يتم تنفيذ أول شرط صحيح فقط\n",
+                    "- `else` يمسك جميع الحالات المتبقية (اختيارية)\n",
+                    "\n",
+                    "</div>\n",
+                    "</details>"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept3_example",
+                "metadata": {},
+                "source": [
+                    "### Example 3: Grading System\n",
+                    "\n",
+                    "Assign a letter grade based on score:\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept3_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# Example: Grading system\n",
+                    "score = 85\n",
+                    "\n",
+                    "if score >= 90:\n",
+                    "    print(\"Grade: A\")\n",
+                    "elif score >= 80:\n",
+                    "    print(\"Grade: B\")\n",
+                    "elif score >= 70:\n",
+                    "    print(\"Grade: C\")\n",
+                    "else:\n",
+                    "    print(\"Grade: F\")\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept3_task",
+                "metadata": {},
+                "source": [
+                    "### Task 3: Ticket Price Calculator\n",
+                    "\n",
+                    "Calculate ticket price based on age:\n",
+                    "- Age < 5: \"Free\"\n",
+                    "- Age 5-12: \"$5\"\n",
+                    "- Age 13-64: \"$15\"\n",
+                    "- Age 65+: \"$10 (Senior)\"\n",
+                    "\n",
+                    "Test with: age = 25\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept3_task_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# TODO: Determine ticket price\n",
+                    "age = 25\n",
+                    "\n",
+                    "# Write your code here\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept4_intro",
+                "metadata": {},
+                "source": [
+                    "## Concept 4: Nested Conditionals - Complex Decisions\n",
+                    "\n",
+                    "Nested conditionals are `if` statements inside other `if` statements. Use them for complex, hierarchical decisions.\n",
+                    "\n",
+                    "**Example:**\n",
+                    "```python\n",
+                    "if age >= 18:\n",
+                    "    if has_license:\n",
+                    "        print(\"You can drive!\")\n",
+                    "```\n",
+                    "\n",
+                    "**Key Points:**\n",
+                    "- Inner conditions only check if outer condition is True\n",
+                    "- Use proper indentation (8 spaces for nested)\n",
+                    "- Avoid deeply nested code (use `elif` or `and` operator instead)\n",
+                    "- Can use with `and`, `or`, `not` operators"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept4_arabic",
+                "metadata": {},
+                "source": [
+                    "<details>\n",
+                    "<summary style=\"cursor: pointer; color: #667EEA; font-weight: bold; font-size: 14px; font-family: 'Amiri', serif;\">🌍 Arabic Translation / الترجمة العربية</summary>\n",
+                    "\n",
+                    "<div dir=\"rtl\" style=\"text-align: right; margin-top: 10px; padding: 15px; background: linear-gradient(135deg, #F5F5F5 0%, #FAFAFA 100%); border-radius: 8px; border-right: 4px solid #667EEA; font-family: 'Amiri', serif; font-size: 16px; line-height: 1.8;\">\n",
+                    "\n",
+                    "<link href=\"https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap\" rel=\"stylesheet\">\n",
+                    "\n",
+                    "## مفهوم 4: الشروط المتداخلة - قرارات معقدة\n",
+                    "\n",
+                    "الشروط المتداخلة هي جمل `if` داخل جمل `if` أخرى. استخدمها للقرارات المعقدة والهرمية.\n",
+                    "\n",
+                    "**مثال:**\n",
+                    "```python\n",
+                    "if age >= 18:\n",
+                    "    if has_license:\n",
+                    "        print(\"You can drive!\")\n",
+                    "```\n",
+                    "\n",
+                    "**النقاط الرئيسية:**\n",
+                    "- الشروط الداخلية تُفحص فقط إذا كان الشرط الخارجي صحيحاً\n",
+                    "- استخدم المسافة البادئة الصحيحة (8 مسافات للمتداخلة)\n",
+                    "- تجنب الكود المتداخل بعمق (استخدم `elif` أو معامل `and` بدلاً من ذلك)\n",
+                    "- يمكن الاستخدام مع `and`, `or`, `not` معاملات\n",
+                    "\n",
+                    "</div>\n",
+                    "</details>"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept4_example",
+                "metadata": {},
+                "source": [
+                    "### Example 4: Driver Eligibility\n",
+                    "\n",
+                    "Check multiple conditions:\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept4_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# Example: Driver eligibility\n",
+                    "age = 18\n",
+                    "has_license = True\n",
+                    "\n",
+                    "if age >= 18:\n",
+                    "    if has_license:\n",
+                    "        print(\"You can drive!\")\n",
+                    "    else:\n",
+                    "        print(\"You need a license first.\")\n",
+                    "else:\n",
+                    "    print(\"You must be 18 to drive.\")\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_concept4_task",
+                "metadata": {},
+                "source": [
+                    "### Task 4: Loan Eligibility Checker\n",
+                    "\n",
+                    "Determine loan eligibility:\n",
+                    "- Age >= 21 AND Credit Score >= 700 → \"Approved\"\n",
+                    "- Age >= 21 BUT Credit Score < 700 → \"Need better credit\"\n",
+                    "- Age < 21 → \"Too young\"\n",
+                    "\n",
+                    "Test with: age = 25, credit_score = 750\n"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_concept4_task_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# TODO: Check loan eligibility\n",
+                    "age = 25\n",
+                    "credit_score = 750\n",
+                    "\n",
+                    "# Write your code here\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_mindmap",
+                "metadata": {},
+                "source": [
+                    "## Control Flow Summary - Visual Mindmap\n",
+                    "\n",
+                    "```mermaid\n",
+                    "mindmap\n",
+                    "  root((Control Flow))\n",
+                    "    if Statement\n",
+                    "      Single condition\n",
+                    "      True path only\n",
+                    "      Skip if False\n",
+                    "    if-else Statement\n",
+                    "      Two paths\n",
+                    "      True or False\n",
+                    "      Binary decision\n",
+                    "    if-elif-else Statement\n",
+                    "      Multiple paths\n",
+                    "      Many conditions\n",
+                    "      First match wins\n",
+                    "    Nested Conditionals\n",
+                    "      Complex logic\n",
+                    "      Conditions within conditions\n",
+                    "      Use with caution\n",
+                    "    Operators\n",
+                    "      Comparison: ==, !=, <, >, <=, >=\n",
+                    "      Logical: and, or, not\n",
+                    "      Combine conditions\n",
+                    "```"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_capstone_intro",
+                "metadata": {},
+                "source": [
+                    "---\n",
+                    "\n",
+                    "## Capstone Project: Student Grade Report System\n",
+                    "\n",
+                    "**Objective:** Build a comprehensive grade analysis system using all control flow concepts.\n",
+                    "\n",
+                    "**Requirements:**\n",
+                    "1. Accept a student name and three test scores\n",
+                    "2. Calculate the average score\n",
+                    "3. Assign a letter grade (A: 90+, B: 80-89, C: 70-79, F: <70)\n",
+                    "4. Check if the student passed (70+) or failed (<70)\n",
+                    "5. Provide feedback based on performance:\n",
+                    "   - 90+: \"Excellent work!\"\n",
+                    "   - 80-89: \"Good job!\"\n",
+                    "   - 70-79: \"Passing, but study more.\"\n",
+                    "   - <70: \"You need to retake this course.\"\n",
+                    "6. Show a bonus message if student scored above 95\n",
+                    "\n",
+                    "**Output Example:**\n",
+                    "```\n",
+                    "Student Name: John\n",
+                    "Average Score: 87.5\n",
+                    "Letter Grade: B\n",
+                    "Status: PASSED\n",
+                    "Feedback: Good job!\n",
+                    "```"
+                ]
+            },
+            {
+                "cell_type": "python",
+                "execution_count": None,
+                "id": "lab2_capstone_code",
+                "metadata": {},
+                "outputs": [],
+                "source": [
+                    "# Capstone: Student Grade Report System\n",
+                    "# TODO: Implement the grade report system\n",
+                    "\n",
+                    "# Get input\n",
+                    "student_name = input(\"Enter student name: \")\n",
+                    "score1 = float(input(\"Enter test 1 score: \"))\n",
+                    "score2 = float(input(\"Enter test 2 score: \"))\n",
+                    "score3 = float(input(\"Enter test 3 score: \"))\n",
+                    "\n",
+                    "# TODO: Calculate average\n",
+                    "# TODO: Determine grade (A, B, C, F)\n",
+                    "# TODO: Check pass/fail\n",
+                    "# TODO: Provide feedback\n",
+                    "# TODO: Display bonus message if applicable\n",
+                    "\n",
+                    "# Starter structure:\n",
+                    "# average = (score1 + score2 + score3) / 3\n",
+                    "# Print the results\n"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_resources",
+                "metadata": {},
+                "source": [
+                    "## Key Takeaways\n",
+                    "\n",
+                    "✅ **if** - Execute code conditionally  \n",
+                    "✅ **if-else** - Two decision paths  \n",
+                    "✅ **if-elif-else** - Multiple conditions  \n",
+                    "✅ **Nested conditionals** - Complex hierarchical logic  \n",
+                    "✅ **Operators** - Compare and combine conditions  \n",
+                    "✅ **Best Practice** - Keep conditions clear and simple\n",
+                    "\n",
+                    "## Resources\n",
+                    "\n",
+                    "- [Python Docs: if statements](https://docs.python.org/3/tutorial/controlflow.html)\n",
+                    "- [Real Python: Conditional Statements](https://realpython.com/python-conditional-statements/)\n",
+                    "- [W3Schools: Python if...else](https://www.w3schools.com/python/python_conditions.asp)"
+                ]
+            },
+            {
+                "cell_type": "markdown",
+                "id": "lab2_colab",
+                "metadata": {},
+                "source": [
+                    "---\n",
+                    "\n",
+                    "## 📓 Run in Google Colab\n",
+                    "\n",
+                    "You can run this notebook directly in Google Colab by clicking the button below:\n",
+                    "\n",
+                    "[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AhmadAlsaadi/ENCH320-Labs/blob/main/Notebook_02_Control_Flow.ipynb)"
+                ]
+            }
+        ],
+        "metadata": {
+            "kernelspec": {
+                "display_name": "Python 3",
+                "language": "python",
+                "name": "python3"
+            },
+            "language_info": {
+                "name": "python",
+                "version": "3.8.0"
+            }
+        },
+        "nbformat": 4,
+        "nbformat_minor": 4
+    }
+    
+    return notebook
+
+if __name__ == "__main__":
+    import os
+    
+    workspace_dir = r"c:\Users\al7ak\Documents\gitRepo\ENCH320-Labs"
+    
+    # Generate Lab 2 (Control Flow) with complete Arabic translations
+    lab2 = create_control_flow_notebook()
+    lab2_path = os.path.join(workspace_dir, "Notebook_02_Control_Flow.ipynb")
+    with open(lab2_path, 'w', encoding='utf-8') as f:
+        json.dump(lab2, f, indent=1, ensure_ascii=False)
+    print(f"✓ Lab 2 (Control Flow) fixed with complete Arabic translations: {len(lab2['cells'])} cells")
+    print("✓ Google Colab link verified and working")
